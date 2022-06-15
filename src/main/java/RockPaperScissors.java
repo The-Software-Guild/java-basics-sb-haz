@@ -6,11 +6,13 @@ public class RockPaperScissors {
     public static void main(String[] args) {
 
         do {
+
             // Num of rounds
             System.out.println("How many rounds do you want to play? Enter between 1-10.");
             Scanner scanner = new Scanner(System.in);
             int input = scanner.nextInt();
             scanner.nextLine();
+
             // Validate rounds, start game
             if (input >= 1 && input <= 10) {
                 playGame(input);
@@ -20,7 +22,6 @@ public class RockPaperScissors {
 
             // Play again
             System.out.println("Do you want to play again? Type YES or NO.");
-            //Scanner playAgainScanner = new Scanner(System.in);
             String playAgain = scanner.nextLine();
             if (playAgain.equalsIgnoreCase("No")){
                 System.out.println("Ok quitting game...");
@@ -41,7 +42,6 @@ public class RockPaperScissors {
         for (int i = 1; i <= rounds; i++) {
 
             int playerMove, compMove;
-
             System.out.println("=============== Round " + i + " ===============");
             System.out.println("Rock (1), Paper (2), or Scissors (3)? ");
 

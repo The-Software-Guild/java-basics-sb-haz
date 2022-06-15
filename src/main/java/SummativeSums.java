@@ -13,7 +13,6 @@ public class SummativeSums {
     }
 
     // Calc sum of arrays method
-    // Return int
     public static int calcSummativeSums(int[] array){
         int sum = 0;
         for (int num : array) {
