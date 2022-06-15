@@ -14,17 +14,18 @@ public class DogGenetics {
 
         // Calculate dog breed percentages
         Random random = new Random();
-        int breedOne = random.nextInt(100/4);
-        int breedTwo = random.nextInt(100/4);
-        int breedThree = random.nextInt(100/4);
-        int breedFour = random.nextInt(100/4);
-        int breedFive = 100 - breedOne - breedTwo - breedThree - breedFour;
+        int[] breed = new int[5];
+        breed[4] = 100;
+        for (int i = 0; i < 4; i++){
+            breed[i] = random.nextInt(100/4);
+            breed[4] -= breed[i];
+        }
 
         // Print dog breed percentages
-        System.out.println(breedOne + "% St. Bernard");
-        System.out.println(breedTwo + "% Chihuahua");
-        System.out.println(breedThree + "% Dramatic RedNosed Asian Pug");
-        System.out.println(breedFour + "% Common Cur");
-        System.out.println(breedFive + "% King Doberman");
+        System.out.println(breed[0] + "% St. Bernard");
+        System.out.println(breed[1] + "% Chihuahua");
+        System.out.println(breed[2] + "% Dramatic RedNosed Asian Pug");
+        System.out.println(breed[3] + "% Common Cur");
+        System.out.println(breed[4] + "% King Doberman");
     }
 }
