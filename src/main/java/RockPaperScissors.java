@@ -62,7 +62,8 @@ public class RockPaperScissors {
 
             // Computer play
             Random random = new Random();
-            compMove = random.nextInt(4);
+            compMove = random.nextInt(3) + 1;
+            System.out.println("compMove " + compMove);
             switch (compMove) {
                 case 1:
                     System.out.println("Computer has picked Rock.");
